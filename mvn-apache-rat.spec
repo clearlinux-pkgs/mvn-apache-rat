@@ -4,18 +4,20 @@
 #
 Name     : mvn-apache-rat
 Version  : 0.11
-Release  : 3
+Release  : 4
 URL      : https://github.com/apache/creadur-rat/archive/apache-rat-project-0.11.tar.gz
 Source0  : https://github.com/apache/creadur-rat/archive/apache-rat-project-0.11.tar.gz
 Source1  : https://repo1.maven.org/maven2/org/apache/rat/apache-rat-api/0.12/apache-rat-api-0.12.jar
 Source2  : https://repo1.maven.org/maven2/org/apache/rat/apache-rat-api/0.12/apache-rat-api-0.12.pom
-Source3  : https://repo1.maven.org/maven2/org/apache/rat/apache-rat-core/0.12/apache-rat-core-0.12.jar
-Source4  : https://repo1.maven.org/maven2/org/apache/rat/apache-rat-core/0.12/apache-rat-core-0.12.pom
-Source5  : https://repo1.maven.org/maven2/org/apache/rat/apache-rat-plugin/0.12/apache-rat-plugin-0.12.jar
-Source6  : https://repo1.maven.org/maven2/org/apache/rat/apache-rat-plugin/0.12/apache-rat-plugin-0.12.pom
-Source7  : https://repo1.maven.org/maven2/org/apache/rat/apache-rat-project/0.12/apache-rat-project-0.12.pom
-Source8  : https://repo1.maven.org/maven2/org/apache/rat/apache-rat/0.11/apache-rat-0.11.jar
-Source9  : https://repo1.maven.org/maven2/org/apache/rat/apache-rat/0.11/apache-rat-0.11.pom
+Source3  : https://repo1.maven.org/maven2/org/apache/rat/apache-rat-core/0.11/apache-rat-core-0.11.jar
+Source4  : https://repo1.maven.org/maven2/org/apache/rat/apache-rat-core/0.11/apache-rat-core-0.11.pom
+Source5  : https://repo1.maven.org/maven2/org/apache/rat/apache-rat-core/0.12/apache-rat-core-0.12.jar
+Source6  : https://repo1.maven.org/maven2/org/apache/rat/apache-rat-core/0.12/apache-rat-core-0.12.pom
+Source7  : https://repo1.maven.org/maven2/org/apache/rat/apache-rat-plugin/0.12/apache-rat-plugin-0.12.jar
+Source8  : https://repo1.maven.org/maven2/org/apache/rat/apache-rat-plugin/0.12/apache-rat-plugin-0.12.pom
+Source9  : https://repo1.maven.org/maven2/org/apache/rat/apache-rat-project/0.12/apache-rat-project-0.12.pom
+Source10  : https://repo1.maven.org/maven2/org/apache/rat/apache-rat/0.11/apache-rat-0.11.jar
+Source11  : https://repo1.maven.org/maven2/org/apache/rat/apache-rat/0.11/apache-rat-0.11.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -48,26 +50,32 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-r
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat-api/0.12
 cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat-api/0.12
 
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat-core/0.12
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat-core/0.12
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat-core/0.11
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat-core/0.11
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat-core/0.11
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat-core/0.11
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat-core/0.12
-cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat-core/0.12
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat-core/0.12
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat-core/0.12
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat-core/0.12
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat-plugin/0.12
-cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat-plugin/0.12
+cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat-plugin/0.12
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat-plugin/0.12
-cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat-plugin/0.12
+cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat-plugin/0.12
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat-project/0.12
-cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat-project/0.12
+cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat-project/0.12
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat/0.11
-cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat/0.11
+cp %{SOURCE10} %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat/0.11
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat/0.11
-cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat/0.11
+cp %{SOURCE11} %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-rat/0.11
 
 
 %files
@@ -77,6 +85,8 @@ cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/org/apache/rat/apache-r
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/org/apache/rat/apache-rat-api/0.12/apache-rat-api-0.12.jar
 /usr/share/java/.m2/repository/org/apache/rat/apache-rat-api/0.12/apache-rat-api-0.12.pom
+/usr/share/java/.m2/repository/org/apache/rat/apache-rat-core/0.11/apache-rat-core-0.11.jar
+/usr/share/java/.m2/repository/org/apache/rat/apache-rat-core/0.11/apache-rat-core-0.11.pom
 /usr/share/java/.m2/repository/org/apache/rat/apache-rat-core/0.12/apache-rat-core-0.12.jar
 /usr/share/java/.m2/repository/org/apache/rat/apache-rat-core/0.12/apache-rat-core-0.12.pom
 /usr/share/java/.m2/repository/org/apache/rat/apache-rat-plugin/0.12/apache-rat-plugin-0.12.jar
