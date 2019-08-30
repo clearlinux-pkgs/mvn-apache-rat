@@ -4,7 +4,7 @@
 #
 Name     : mvn-apache-rat
 Version  : 0.11
-Release  : 8
+Release  : 9
 URL      : https://github.com/apache/creadur-rat/archive/apache-rat-project-0.11.tar.gz
 Source0  : https://github.com/apache/creadur-rat/archive/apache-rat-project-0.11.tar.gz
 Source1  : https://repo.maven.apache.org/maven2/org/apache/rat/apache-rat-core/0.10/apache-rat-core-0.10.jar
